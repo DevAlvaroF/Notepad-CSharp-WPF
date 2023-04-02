@@ -5,6 +5,44 @@
     <TargetFramework>net6.0-windows</TargetFramework>
     <Nullable>enable</Nullable>
     <UseWPF>true</UseWPF>
+    <ApplicationIcon>Assets\icon.ico</ApplicationIcon>
+    <UseWindowsForms>true</UseWindowsForms>
   </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Assets\copy.png" />
+    <None Remove="Assets\cut.png" />
+    <None Remove="Assets\find.png" />
+    <None Remove="Assets\font.png" />
+    <None Remove="Assets\icon.ico" />
+    <None Remove="Assets\new.png" />
+    <None Remove="Assets\open.png" />
+    <None Remove="Assets\paste.png" />
+    <None Remove="Assets\print.png" />
+    <None Remove="Assets\redo.png" />
+    <None Remove="Assets\save.png" />
+    <None Remove="Assets\save_as.png" />
+    <None Remove="Assets\undo.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\SupportClasses\SupportClasses.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Assets\copy.png" />
+    <Resource Include="Assets\cut.png" />
+    <Resource Include="Assets\find.png" />
+    <Resource Include="Assets\font.png" />
+    <Resource Include="Assets\icon.ico" />
+    <Resource Include="Assets\new.png" />
+    <Resource Include="Assets\open.png" />
+    <Resource Include="Assets\paste.png" />
+    <Resource Include="Assets\print.png" />
+    <Resource Include="Assets\redo.png" />
+    <Resource Include="Assets\save.png" />
+    <Resource Include="Assets\save_as.png" />
+    <Resource Include="Assets\undo.png" />
+  </ItemGroup>
 
 </Project>

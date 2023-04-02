@@ -5,8 +5,95 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:NotepadMain"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="FirePad - A Notepad for the 21st Century" Height="450" Width="800">
     <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <DockPanel LastChildFill="True" Grid.Row="0" VerticalAlignment="Center">
+            <Menu DockPanel.Dock="Top"
+                  FontFamily="Consolas"
+                  FontSize="20">
+                <MenuItem Header="_File" Width="auto">
+                    <MenuItem Header="New" x:Name="newMenus" >
+                        <MenuItem.Icon>
+                            <Image Source="Assets/new.png"/>
+                        </MenuItem.Icon>
+                    </MenuItem>
+                    <MenuItem Header="Save" x:Name="saveMenus" Click="saveMenus_Click" >
+                        <MenuItem.Icon>
+                            <Image Source="Assets/save.png"/>
+                        </MenuItem.Icon>
+                    </MenuItem>
+                    <MenuItem Header="SaveAs" x:Name="saveAsMenus" Click="saveAsMenus_Click" >
+                        <MenuItem.Icon>
+                            <Image Source="Assets/save_as.png"/>
+                        </MenuItem.Icon>
+                    </MenuItem>
+                    <MenuItem Header="Open" x:Name="openMenus" Click="openMenus_Click">
+                        <MenuItem.Icon>
+                            <Image Source="Assets/open.png"/>
+                        </MenuItem.Icon>
+                    </MenuItem>
+                    <Separator />
+                    <MenuItem Header="Print" x:Name="printMenus" Click="printMenus_Click">
+                        <MenuItem.Icon>
+                            <Image Source="Assets/print.png"/>
+                        </MenuItem.Icon>
+                    </MenuItem>
+                </MenuItem>
+
+                <MenuItem Header="Edit">
+                    <MenuItem Header="Copy" x:Name="copyMenus" Command="ApplicationCommands.Copy">
+                        <MenuItem.Icon>
+                            <Image Source="Assets/copy.png"/>
+                        </MenuItem.Icon>
+                    </MenuItem>
+                    <MenuItem Header="Paste" x:Name="pasteMenus" Command="ApplicationCommands.Paste">
+                        <MenuItem.Icon>
+                            <Image Source="Assets/paste.png"/>
+                        </MenuItem.Icon>
+                    </MenuItem>
+                    <MenuItem Header="Cut" x:Name="cutMenus" Command="ApplicationCommands.Cut">
+                        <MenuItem.Icon>
+                            <Image Source="Assets/cut.png"/>
+                        </MenuItem.Icon>
+                    </MenuItem>
+                    <Separator/>
+                    <MenuItem Header="Undo" x:Name="undoMenus" Command="ApplicationCommands.Undo">
+                        <MenuItem.Icon>
+                            <Image Source="Assets/undo.png"/>
+                        </MenuItem.Icon>
+                    </MenuItem>
+                    <MenuItem Header="Redo" x:Name="redoMenus" Command="ApplicationCommands.Redo">
+                        <MenuItem.Icon>
+                            <Image Source="Assets/redo.png"/>
+                        </MenuItem.Icon>
+                    </MenuItem>
+                    <Separator/>
+
+                    <MenuItem Header="Find..." x:Name="findMenus" Click="findMenus_Click">
+                        <MenuItem.Icon>
+                            <Image Source="Assets/find.png"/>
+                        </MenuItem.Icon>
+                    </MenuItem>
+                    <MenuItem Header="Font" x:Name="fontMenus" Click="fontMenus_Click">
+                        <MenuItem.Icon>
+                            <Image Source="Assets/font.png"/>
+                        </MenuItem.Icon>
+                    </MenuItem>
+
+                </MenuItem>
+                
+            </Menu>
+        </DockPanel>
+        <RichTextBox Grid.Row="1" x:Name="richTextBox1" Block.LineHeight="1">
+
+        </RichTextBox>
+        
+
 
     </Grid>
 </Window>
